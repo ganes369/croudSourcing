@@ -21,12 +21,8 @@ const NavBar = () => {
         >
           Login
         </Button>
-        <Button
-          iconLeft="bx:user"
-          variant="secondary"
-          className="rounded-md text-white"
-        >
-          Login
+        <Button className="rounded-md text-white" iconRight="bx:plus">
+          Cadastrar nova ação
         </Button>
       </div>
     </div>

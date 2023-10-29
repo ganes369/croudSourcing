@@ -1,36 +1,37 @@
 function toRgba(cssVariable: string) {
-  const color = `var(${cssVariable})`
-  return ({ opacityValue }: any) => `rgba(${color}, ${opacityValue})`
+  const color = `var(${cssVariable})`;
+  return ({ opacityValue }: any) => `rgba(${color}, ${opacityValue})`;
 }
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
         sub: `var(--sub)`,
-        'black-color': `var(--black-color)`,
-        primary: 'var(--primary-color)',
-        secondary: 'var(--secondary-color)',
-        'sub-30': `var(--sub-30)`,
+        "black-color": `var(--black-color)`,
+        "pink-clolor": `rgba(120, 37, 255, 0.1)`,
+        primary: "var(--primary-color)",
+        secondary: "var(--secondary-color)",
+        "sub-30": `var(--sub-30)`,
       },
       backgroundImage: {
-        'on-code': 'var(--on-code)',
-        'on-code-70': 'var(--on-code-70)'
+        "on-code": "var(--on-code)",
+        "on-code-70": "var(--on-code-70)",
       },
       aspectRatio: {
-        'card-image': '420px / 240px',
+        "card-image": "420px / 240px",
       },
       height: {
-        'screen-navbar': 'calc(100vh - 64px)!important'
-      }
+        "screen-navbar": "calc(100vh - 64px)!important",
+      },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
